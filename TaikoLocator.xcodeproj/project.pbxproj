@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B81697DD2AEA0A0300EDB79B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B81697DC2AEA0A0300EDB79B /* GoogleService-Info.plist */; };
+		B83B3C022AEC222D0053A321 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B3C012AEC222D0053A321 /* LocationManager.swift */; };
+		B83B3C052AEC28DA0053A321 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B83B3C042AEC28DA0053A321 /* FirebaseAnalytics */; };
+		B83B3C072AEC28DA0053A321 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B83B3C062AEC28DA0053A321 /* FirebaseAnalyticsSwift */; };
+		B83B3C092AEC28DA0053A321 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B83B3C082AEC28DA0053A321 /* FirebaseFirestore */; };
+		B83B3C0B2AEC28DA0053A321 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B83B3C0A2AEC28DA0053A321 /* FirebaseFirestoreSwift */; };
+		B8C94BDC2ADEB8770032FFBD /* TaikoLocatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C94BDB2ADEB8770032FFBD /* TaikoLocatorApp.swift */; };
+		B8C94BDE2ADEB8770032FFBD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C94BDD2ADEB8770032FFBD /* ContentView.swift */; };
+		B8C94BE02ADEB8770032FFBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C94BDF2ADEB8770032FFBD /* Assets.xcassets */; };
+		B8C94BE32ADEB8770032FFBD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8C94BE22ADEB8770032FFBD /* Preview Assets.xcassets */; };
+		B8C94BED2ADEB8780032FFBD /* TaikoLocatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C94BEC2ADEB8780032FFBD /* TaikoLocatorTests.swift */; };
+		B8C94BF72ADEB8780032FFBD /* TaikoLocatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C94BF62ADEB8780032FFBD /* TaikoLocatorUITests.swift */; };
+		B8C94BF92ADEB8780032FFBD /* TaikoLocatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C94BF82ADEB8780032FFBD /* TaikoLocatorUITestsLaunchTests.swift */; };
+		B8C94C082ADEB8A10032FFBD /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C94C072ADEB8A10032FFBD /* MapView.swift */; };
+		B8C94C0A2ADEB9040032FFBD /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C94C092ADEB9040032FFBD /* MapViewModel.swift */; };
+		B8C94C0F2ADF3FD90032FFBD /* TaikoLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C94C0E2ADF3FD90032FFBD /* TaikoLocation.swift */; };
+		B8C94C112ADF435C0032FFBD /* SetTaikoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8C94C102ADF435C0032FFBD /* SetTaikoView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8C94BE92ADEB8780032FFBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8C94BD02ADEB8770032FFBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C94BD72ADEB8770032FFBD;
+			remoteInfo = TaikoLocator;
+		};
+		B8C94BF32ADEB8780032FFBD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B8C94BD02ADEB8770032FFBD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B8C94BD72ADEB8770032FFBD;
+			remoteInfo = TaikoLocator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B81697DC2AEA0A0300EDB79B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B83B3C012AEC222D0053A321 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		B8C94BD82ADEB8770032FFBD /* TaikoLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaikoLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C94BDB2ADEB8770032FFBD /* TaikoLocatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaikoLocatorApp.swift; sourceTree = "<group>"; };
+		B8C94BDD2ADEB8770032FFBD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		B8C94BDF2ADEB8770032FFBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B8C94BE22ADEB8770032FFBD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B8C94BE82ADEB8780032FFBD /* TaikoLocatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaikoLocatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C94BEC2ADEB8780032FFBD /* TaikoLocatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaikoLocatorTests.swift; sourceTree = "<group>"; };
+		B8C94BF22ADEB8780032FFBD /* TaikoLocatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaikoLocatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8C94BF62ADEB8780032FFBD /* TaikoLocatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaikoLocatorUITests.swift; sourceTree = "<group>"; };
+		B8C94BF82ADEB8780032FFBD /* TaikoLocatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaikoLocatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B8C94C072ADEB8A10032FFBD /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		B8C94C092ADEB9040032FFBD /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		B8C94C0B2ADF30CA0032FFBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		B8C94C0E2ADF3FD90032FFBD /* TaikoLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaikoLocation.swift; sourceTree = "<group>"; };
+		B8C94C102ADF435C0032FFBD /* SetTaikoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTaikoView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B8C94BD52ADEB8770032FFBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B83B3C072AEC28DA0053A321 /* FirebaseAnalyticsSwift in Frameworks */,
+				B83B3C052AEC28DA0053A321 /* FirebaseAnalytics in Frameworks */,
+				B83B3C092AEC28DA0053A321 /* FirebaseFirestore in Frameworks */,
+				B83B3C0B2AEC28DA0053A321 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C94BE52ADEB8780032FFBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C94BEF2ADEB8780032FFBD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B8C94BCF2ADEB8770032FFBD = {
+			isa = PBXGroup;
+			children = (
+				B8C94BDA2ADEB8770032FFBD /* TaikoLocator */,
+				B8C94BEB2ADEB8780032FFBD /* TaikoLocatorTests */,
+				B8C94BF52ADEB8780032FFBD /* TaikoLocatorUITests */,
+				B8C94BD92ADEB8770032FFBD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B8C94BD92ADEB8770032FFBD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B8C94BD82ADEB8770032FFBD /* TaikoLocator.app */,
+				B8C94BE82ADEB8780032FFBD /* TaikoLocatorTests.xctest */,
+				B8C94BF22ADEB8780032FFBD /* TaikoLocatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B8C94BDA2ADEB8770032FFBD /* TaikoLocator */ = {
+			isa = PBXGroup;
+			children = (
+				B81697DC2AEA0A0300EDB79B /* GoogleService-Info.plist */,
+				B8C94C0B2ADF30CA0032FFBD /* Info.plist */,
+				B8C94C062ADEB8950032FFBD /* Models */,
+				B8C94C052ADEB88F0032FFBD /* Views */,
+				B8C94BDB2ADEB8770032FFBD /* TaikoLocatorApp.swift */,
+				B8C94BDD2ADEB8770032FFBD /* ContentView.swift */,
+				B8C94BDF2ADEB8770032FFBD /* Assets.xcassets */,
+				B8C94BE12ADEB8770032FFBD /* Preview Content */,
+			);
+			path = TaikoLocator;
+			sourceTree = "<group>";
+		};
+		B8C94BE12ADEB8770032FFBD /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				B8C94BE22ADEB8770032FFBD /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		B8C94BEB2ADEB8780032FFBD /* TaikoLocatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				B8C94BEC2ADEB8780032FFBD /* TaikoLocatorTests.swift */,
+			);
+			path = TaikoLocatorTests;
+			sourceTree = "<group>";
+		};
+		B8C94BF52ADEB8780032FFBD /* TaikoLocatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B8C94BF62ADEB8780032FFBD /* TaikoLocatorUITests.swift */,
+				B8C94BF82ADEB8780032FFBD /* TaikoLocatorUITestsLaunchTests.swift */,
+			);
+			path = TaikoLocatorUITests;
+			sourceTree = "<group>";
+		};
+		B8C94C052ADEB88F0032FFBD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8C94C072ADEB8A10032FFBD /* MapView.swift */,
+				B8C94C102ADF435C0032FFBD /* SetTaikoView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		B8C94C062ADEB8950032FFBD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8C94C092ADEB9040032FFBD /* MapViewModel.swift */,
+				B8C94C0E2ADF3FD90032FFBD /* TaikoLocation.swift */,
+				B83B3C012AEC222D0053A321 /* LocationManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B8C94BD72ADEB8770032FFBD /* TaikoLocator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8C94BFC2ADEB8780032FFBD /* Build configuration list for PBXNativeTarget "TaikoLocator" */;
+			buildPhases = (
+				B8C94BD42ADEB8770032FFBD /* Sources */,
+				B8C94BD52ADEB8770032FFBD /* Frameworks */,
+				B8C94BD62ADEB8770032FFBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaikoLocator;
+			packageProductDependencies = (
+				B83B3C042AEC28DA0053A321 /* FirebaseAnalytics */,
+				B83B3C062AEC28DA0053A321 /* FirebaseAnalyticsSwift */,
+				B83B3C082AEC28DA0053A321 /* FirebaseFirestore */,
+				B83B3C0A2AEC28DA0053A321 /* FirebaseFirestoreSwift */,
+			);
+			productName = TaikoLocator;
+			productReference = B8C94BD82ADEB8770032FFBD /* TaikoLocator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B8C94BE72ADEB8780032FFBD /* TaikoLocatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8C94BFF2ADEB8780032FFBD /* Build configuration list for PBXNativeTarget "TaikoLocatorTests" */;
+			buildPhases = (
+				B8C94BE42ADEB8780032FFBD /* Sources */,
+				B8C94BE52ADEB8780032FFBD /* Frameworks */,
+				B8C94BE62ADEB8780032FFBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8C94BEA2ADEB8780032FFBD /* PBXTargetDependency */,
+			);
+			name = TaikoLocatorTests;
+			productName = TaikoLocatorTests;
+			productReference = B8C94BE82ADEB8780032FFBD /* TaikoLocatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B8C94BF12ADEB8780032FFBD /* TaikoLocatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8C94C022ADEB8780032FFBD /* Build configuration list for PBXNativeTarget "TaikoLocatorUITests" */;
+			buildPhases = (
+				B8C94BEE2ADEB8780032FFBD /* Sources */,
+				B8C94BEF2ADEB8780032FFBD /* Frameworks */,
+				B8C94BF02ADEB8780032FFBD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8C94BF42ADEB8780032FFBD /* PBXTargetDependency */,
+			);
+			name = TaikoLocatorUITests;
+			productName = TaikoLocatorUITests;
+			productReference = B8C94BF22ADEB8780032FFBD /* TaikoLocatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B8C94BD02ADEB8770032FFBD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					B8C94BD72ADEB8770032FFBD = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					B8C94BE72ADEB8780032FFBD = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = B8C94BD72ADEB8770032FFBD;
+					};
+					B8C94BF12ADEB8780032FFBD = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = B8C94BD72ADEB8770032FFBD;
+					};
+				};
+			};
+			buildConfigurationList = B8C94BD32ADEB8770032FFBD /* Build configuration list for PBXProject "TaikoLocator" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B8C94BCF2ADEB8770032FFBD;
+			packageReferences = (
+				B83B3C032AEC28DA0053A321 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			productRefGroup = B8C94BD92ADEB8770032FFBD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B8C94BD72ADEB8770032FFBD /* TaikoLocator */,
+				B8C94BE72ADEB8780032FFBD /* TaikoLocatorTests */,
+				B8C94BF12ADEB8780032FFBD /* TaikoLocatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B8C94BD62ADEB8770032FFBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C94BE32ADEB8770032FFBD /* Preview Assets.xcassets in Resources */,
+				B81697DD2AEA0A0300EDB79B /* GoogleService-Info.plist in Resources */,
+				B8C94BE02ADEB8770032FFBD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C94BE62ADEB8780032FFBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C94BF02ADEB8780032FFBD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B8C94BD42ADEB8770032FFBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C94C0F2ADF3FD90032FFBD /* TaikoLocation.swift in Sources */,
+				B8C94BDE2ADEB8770032FFBD /* ContentView.swift in Sources */,
+				B8C94C082ADEB8A10032FFBD /* MapView.swift in Sources */,
+				B83B3C022AEC222D0053A321 /* LocationManager.swift in Sources */,
+				B8C94BDC2ADEB8770032FFBD /* TaikoLocatorApp.swift in Sources */,
+				B8C94C112ADF435C0032FFBD /* SetTaikoView.swift in Sources */,
+				B8C94C0A2ADEB9040032FFBD /* MapViewModel.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C94BE42ADEB8780032FFBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C94BED2ADEB8780032FFBD /* TaikoLocatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8C94BEE2ADEB8780032FFBD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8C94BF92ADEB8780032FFBD /* TaikoLocatorUITestsLaunchTests.swift in Sources */,
+				B8C94BF72ADEB8780032FFBD /* TaikoLocatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B8C94BEA2ADEB8780032FFBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C94BD72ADEB8770032FFBD /* TaikoLocator */;
+			targetProxy = B8C94BE92ADEB8780032FFBD /* PBXContainerItemProxy */;
+		};
+		B8C94BF42ADEB8780032FFBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B8C94BD72ADEB8770032FFBD /* TaikoLocator */;
+			targetProxy = B8C94BF32ADEB8780032FFBD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		B8C94BFA2ADEB8780032FFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B8C94BFB2ADEB8780032FFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B8C94BFD2ADEB8780032FFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TaikoLocator/Preview Content\"";
+				DEVELOPMENT_TEAM = P9PUB4YFC7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaikoLocator/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "アプリ起動時だけ、位置情報を取得します";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mas.TaikoLocator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B8C94BFE2ADEB8780032FFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"TaikoLocator/Preview Content\"";
+				DEVELOPMENT_TEAM = P9PUB4YFC7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaikoLocator/Info.plist;
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "アプリ起動時だけ、位置情報を取得します";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mas.TaikoLocator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B8C94C002ADEB8780032FFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9PUB4YFC7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mas.TaikoLocatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaikoLocator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TaikoLocator";
+			};
+			name = Debug;
+		};
+		B8C94C012ADEB8780032FFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9PUB4YFC7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mas.TaikoLocatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaikoLocator.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/TaikoLocator";
+			};
+			name = Release;
+		};
+		B8C94C032ADEB8780032FFBD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9PUB4YFC7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mas.TaikoLocatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TaikoLocator;
+			};
+			name = Debug;
+		};
+		B8C94C042ADEB8780032FFBD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = P9PUB4YFC7;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mas.TaikoLocatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TaikoLocator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B8C94BD32ADEB8770032FFBD /* Build configuration list for PBXProject "TaikoLocator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8C94BFA2ADEB8780032FFBD /* Debug */,
+				B8C94BFB2ADEB8780032FFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8C94BFC2ADEB8780032FFBD /* Build configuration list for PBXNativeTarget "TaikoLocator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8C94BFD2ADEB8780032FFBD /* Debug */,
+				B8C94BFE2ADEB8780032FFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8C94BFF2ADEB8780032FFBD /* Build configuration list for PBXNativeTarget "TaikoLocatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8C94C002ADEB8780032FFBD /* Debug */,
+				B8C94C012ADEB8780032FFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8C94C022ADEB8780032FFBD /* Build configuration list for PBXNativeTarget "TaikoLocatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8C94C032ADEB8780032FFBD /* Debug */,
+				B8C94C042ADEB8780032FFBD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B83B3C032AEC28DA0053A321 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B83B3C042AEC28DA0053A321 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B83B3C032AEC28DA0053A321 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		B83B3C062AEC28DA0053A321 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B83B3C032AEC28DA0053A321 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		B83B3C082AEC28DA0053A321 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B83B3C032AEC28DA0053A321 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		B83B3C0A2AEC28DA0053A321 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B83B3C032AEC28DA0053A321 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = B8C94BD02ADEB8770032FFBD /* Project object */;
+}
