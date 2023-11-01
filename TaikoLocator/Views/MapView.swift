@@ -10,7 +10,11 @@ import MapKit
 
 struct MapView: View {
     
-    @StateObject private var viewModel = MapViewModel()
+    @StateObject var viewModel = MapViewModel()
+    @StateObject var locationManager = LocationManager()
+    @State var showSetTaikoView = false
+    @State var latitude: Double = 0
+    @State var longitude: Double = 0
     
     var body: some View {
         NavigationView {
@@ -24,12 +28,21 @@ struct MapView: View {
                 .ignoresSafeArea()
                 
                 
-                NavigationLink(destination: SetTaikoView(latitude: 0, longitude: 0).environmentObject(LocationManager())) {
+                Button(action: {
+                    //緯度と軽度を取得
+                    latitude = 23
+                    longitude = 32
+                    showSetTaikoView.toggle()
+                }, label: {
                     Text("現在地を太鼓として登録")
                         .frame(maxWidth: .infinity)
                         .frame(height: 75)
                         .font(.title)
                         .background(Color.white)
+                })
+                
+                NavigationLink(destination: SetTaikoView(latitude: latitude, longitude: longitude).environmentObject(locationManager), isActive: $showSetTaikoView) {
+                    
                 }
             }
         }
