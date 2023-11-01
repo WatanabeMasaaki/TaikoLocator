@@ -12,6 +12,7 @@ import Combine
 
 final class MapViewModel: NSObject, ObservableObject {
     private let manager = CLLocationManager()
+    @Published var location = CLLocation()
     
     @Published var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(
@@ -45,12 +46,8 @@ extension MapViewModel: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print(#function)
-        manager.stopUpdatingLocation()
-        guard let location = locations.first else { return }
         
-        withAnimation{
-            region.center = location.coordinate
-        }
+        self.location = locations.last!
     }
 }
 

@@ -30,8 +30,8 @@ struct MapView: View {
                 
                 Button(action: {
                     //緯度と軽度を取得
-                    latitude = 23
-                    longitude = 32
+                    latitude = $viewModel.location.wrappedValue.coordinate.latitude
+                    longitude = $viewModel.location.wrappedValue.coordinate.longitude
                     showSetTaikoView.toggle()
                 }, label: {
                     Text("現在地を太鼓として登録")
