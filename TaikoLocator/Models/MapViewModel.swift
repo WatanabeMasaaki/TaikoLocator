@@ -14,6 +14,7 @@ final class MapViewModel: NSObject, ObservableObject {
     private let manager = CLLocationManager()
     @Published var location = CLLocation()
     
+    //初期位置の座標
     @Published var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(
             latitude: 35.6812362,
@@ -25,6 +26,7 @@ final class MapViewModel: NSObject, ObservableObject {
     
     @Published var trackingMode: MapUserTrackingMode = .follow
     
+    //イニシャライザで自身をデリゲートに設定する
     override init() {
         super.init()
         manager.delegate = self
@@ -33,6 +35,8 @@ final class MapViewModel: NSObject, ObservableObject {
 }
 
 extension MapViewModel: CLLocationManagerDelegate {
+    
+    // 位置情報関連の権限をリクエスト
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         print(#function)
         if manager.authorizationStatus == .authorizedWhenInUse {
@@ -44,6 +48,7 @@ extension MapViewModel: CLLocationManagerDelegate {
         }
     }
     
+    // 位置情報が更新されたら呼び出される.
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         print(#function)
         

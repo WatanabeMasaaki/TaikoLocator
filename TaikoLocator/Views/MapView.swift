@@ -19,6 +19,8 @@ struct MapView: View {
     var body: some View {
         NavigationView {
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom)){
+                
+                //マップ表示
                 Map(
                     coordinateRegion: $viewModel.region,
                     interactionModes: .all,
@@ -28,6 +30,7 @@ struct MapView: View {
                 .ignoresSafeArea()
                 
                 
+                //SetTaikoViewがに遷移するボタン
                 Button(action: {
                     //緯度と軽度を取得
                     latitude = $viewModel.location.wrappedValue.coordinate.latitude
@@ -41,6 +44,7 @@ struct MapView: View {
                         .background(Color.white)
                 })
                 
+                //showSetTaikoViewがTrueになったらSetTaikoViewの画面に遷移する
                 NavigationLink(destination: SetTaikoView(latitude: latitude, longitude: longitude).environmentObject(locationManager), isActive: $showSetTaikoView) {
                     
                 }

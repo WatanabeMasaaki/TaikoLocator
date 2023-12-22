@@ -13,6 +13,7 @@ class LocationManager: ObservableObject {
     @Published private(set) var locations:[TaikoLocation] = []
     let db = Firestore.firestore()
     
+    //Firebaseにデータを追加
     func sendLocation (latitude: Double, longitude: Double, name: String, cases: Int, coins: Int, plays: Int, description: String?) {
         
         let newLocation: [String : Any] = [
