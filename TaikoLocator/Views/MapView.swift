@@ -16,6 +16,7 @@ struct MapView: View {
     @State var latitude: Double = 0
     @State var longitude: Double = 0
     
+    
     var body: some View {
         NavigationView {
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom)){
@@ -25,8 +26,11 @@ struct MapView: View {
                     coordinateRegion: $viewModel.region,
                     interactionModes: .all,
                     showsUserLocation: true,
-                    userTrackingMode: $viewModel.trackingMode
-                )
+                    userTrackingMode: $viewModel.trackingMode,
+                    annotationItems: locationManager.locations
+                ) { place in
+                    MapMarker(coordinate: CLLocationCoordinate2D(latitude: place.latitude, longitude: place.longitude), tint: Color.orange)
+                }
                 .ignoresSafeArea()
                 
                 
@@ -53,8 +57,8 @@ struct MapView: View {
     }
 }
 
-struct MapView_Previews: PreviewProvider {
-    static var previews: some View {
-        MapView()
-    }
-}
+//struct MapView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MapView()
+//    }
+//}

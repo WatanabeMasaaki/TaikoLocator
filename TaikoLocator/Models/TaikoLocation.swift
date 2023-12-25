@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import MapKit
 
-struct TaikoLocation: Identifiable {
+struct TaikoLocation: Identifiable, Codable {
     var id: String
     var latitude: Double
     var longitude: Double
