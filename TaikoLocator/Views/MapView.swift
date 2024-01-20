@@ -17,8 +17,9 @@ struct MapView: View {
     @State var longitude: Double = 0
     
     
+    
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ZStack(alignment: Alignment(horizontal: .trailing, vertical: .bottom)){
                 
                 //マップ表示

@@ -16,13 +16,14 @@ struct SetTaikoView: View {
     let longitude: Double
     
     @State var name: String = ""
-    @State var cases: String = "1"
-    @State var coins: String = "1"
-    @State var plays: String = "3"
+    @State var cases: Int = 1
+    @State var coins: Int = 1
+    @State var plays: Int = 3
     @State var description: String = ""
     @State var showAlert: Bool = false
     
     var body: some View {
+        
         VStack {
             Text("太鼓を登録")
                 .font(.title)
@@ -36,71 +37,81 @@ struct SetTaikoView: View {
                     .overlay{
                         RoundedRectangle(cornerRadius: 14)
                             .stroke(lineWidth: 1)
-                            .frame(height: 57)
                     }
+                    
             }
             .padding(5)
             
-            VStack(alignment: .leading){
+            HStack{
                 Text("台数")
                     .bold()
                     .padding(.leading, 15)
-                TextField("台数", text: $cases)
-                    .padding()
-                    .overlay{
-                        RoundedRectangle(cornerRadius: 14)
-                            .stroke(lineWidth: 1)
-                            .frame(height: 57)
-                    }
+                Stepper(value: $cases, in: 1...1000000, step: 1) {
+                    Text("\(cases)")
+                }
+                .padding()
+
             }
             .padding(5)
             
-            VStack(alignment: .leading){
+            HStack{
                 Text("クレ数")
                     .bold()
                     .padding(.leading, 15)
-                TextField("クレ数", text: $coins)
-                    .padding()
-                    .overlay{
-                        RoundedRectangle(cornerRadius: 14)
-                            .stroke(lineWidth: 1)
-                            .frame(height: 57)
-                    }
+                Stepper(value: $coins, in: 1...1000000, step: 1) {
+                    Text("\(coins)")
+                }
+                .padding()
             }
             .padding(5)
             
-            VStack(alignment: .leading){
+            HStack{
                 Text("曲数")
                     .bold()
                     .padding(.leading, 15)
-                TextField("曲数", text: $plays)
-                    .padding()
-                    .overlay{
-                        RoundedRectangle(cornerRadius: 14)
-                            .stroke(lineWidth: 1)
-                            .frame(height: 57)
-                    }
+                Stepper(value: $plays, in: 1...1000000, step: 1) {
+                    Text("\(plays)")
+                }
+                .padding()
             }
             .padding(5)
             
+            
+            
             VStack(alignment: .leading){
-                Text("メモ")
-                    .bold()
-                    .padding(.leading, 15)
-                TextField("メモ", text: $description)
-                    .padding()
-                    .overlay{
-                        RoundedRectangle(cornerRadius: 14)
-                            .stroke(lineWidth: 1)
-                            .frame(height: 57)
-                    }
+                HStack{
+                    Text("詳細")
+                        .bold()
+                        .padding(.leading, 15)
+                    
+                    
+                    
+                    
+                    NavigationLink("編集", destination: DescriptionEditView(description: $description))
+                    
+                    
+                }
+                
+                
+                HStack{
+                    Text("\(description)")
+                        .padding()
+                        .background(Color(.secondarySystemFill))
+                        .cornerRadius(14)
+                    Spacer()
+                }
+                
             }
             .padding(5)
+                
+                
+            
+            
             
             Spacer()
             
             Button(action: {
-                locationManager.sendLocation(latitude: latitude, longitude: longitude, name: name, cases: Int(cases)!, coins: Int(coins)!, plays: Int(plays)!, description: description)
+                locationManager.sendLocation(latitude: latitude, longitude: longitude, name: name, cases: cases, coins: coins, plays: plays, description: description)
                 showAlert = true
             }, label: {
                 Text("登録")
@@ -112,13 +123,15 @@ struct SetTaikoView: View {
                 dismiss()
             })
         })
-        
-        
-        
-        
-        
     }
+    
+    
+    
+    
+    
+    
 }
+
 
 struct SetTaikoView_Previews: PreviewProvider {
     static var previews: some View {

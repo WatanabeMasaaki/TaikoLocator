@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B804F6722B5C3AC300F44595 /* DescriptionEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B804F6712B5C3AC300F44595 /* DescriptionEditView.swift */; };
 		B81697DD2AEA0A0300EDB79B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B81697DC2AEA0A0300EDB79B /* GoogleService-Info.plist */; };
 		B82FDCEE2B3A612B00C6DD56 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = B82FDCED2B3A612B00C6DD56 /* README.md */; };
 		B83B3C022AEC222D0053A321 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B83B3C012AEC222D0053A321 /* LocationManager.swift */; };
@@ -45,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B804F6712B5C3AC300F44595 /* DescriptionEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionEditView.swift; sourceTree = "<group>"; };
 		B81697DC2AEA0A0300EDB79B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B82FDCED2B3A612B00C6DD56 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B83B3C012AEC222D0053A321 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 			children = (
 				B8C94C072ADEB8A10032FFBD /* MapView.swift */,
 				B8C94C102ADF435C0032FFBD /* SetTaikoView.swift */,
+				B804F6712B5C3AC300F44595 /* DescriptionEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B8C94C0F2ADF3FD90032FFBD /* TaikoLocation.swift in Sources */,
+				B804F6722B5C3AC300F44595 /* DescriptionEditView.swift in Sources */,
 				B8C94BDE2ADEB8770032FFBD /* ContentView.swift in Sources */,
 				B8C94C082ADEB8A10032FFBD /* MapView.swift in Sources */,
 				B83B3C022AEC222D0053A321 /* LocationManager.swift in Sources */,
